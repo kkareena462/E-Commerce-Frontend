@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Tailwind E-Commerce Store - India Pricing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a class="text-2xl font-bold text-indigo-600" href="#">ShopEase</a>
+            <nav class="hidden md:flex space-x-8 text-gray-700 font-semibold">
+                <a class="hover:text-indigo-600 transition" href="#home-section">Home</a>
+                <a class="hover:text-indigo-600 transition" href="#products">Shop</a>
+                <a class="hover:text-indigo-600 transition" href="#about-section">About</a>
+                <a class="hover:text-indigo-600 transition" href="#contact-section">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button aria-label="Open cart" class="relative text-gray-700 hover:text-indigo-600 transition focus:outline-none" id="cart-button">
+          <i class="fas fa-shopping-cart fa-lg"></i>
+          <span class="absolute -top-2 -right-2 bg-red-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center" id="cart-count">0</span>
+        </button>
+                <button aria-label="Open menu" class="md:hidden text-gray-700 hover:text-indigo-600 transition focus:outline-none" id="menu-button">
+          <i class="fas fa-bars fa-lg"></i>
+        </button>
+            </div>
+        </div>
+        <nav class="md:hidden bg-white shadow-lg hidden" id="mobile-menu">
+            <div class="flex flex-col space-y-2 px-4 py-3 text-gray-700 font-semibold">
+                <a class="hover:text-indigo-600 transition" href="#home-section">Home</a>
+                <a class="hover:text-indigo-600 transition" href="#products">Shop</a>
+                <a class="hover:text-indigo-600 transition" href="#about-section">About</a>
+                <a class="hover:text-indigo-600 transition" href="#contact-section">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8" id="home-section">
+        <!-- Hero Section -->
+        <section class="mb-12 flex flex-col md:flex-row items-center bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="md:w-1/2 p-8">
+                <h1 class="text-4xl font-extrabold text-gray-900 mb-4">Discover Your Style with ShopEase</h1>
+                <p class="text-gray-700 mb-6">Explore the latest trends in fashion, electronics, and more. Quality products at unbeatable prices.</p>
+                <a class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700 transition" href="#products">Shop Now</a>
+            </div>
+            <div class="md:w-1/2">
+                <img alt="Collage of fashion and electronics products including clothes, shoes, and gadgets" class="w-full h-auto object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/914d5e71-8100-47a4-0857-455e8f83c853.jpg" width="600"
+                />
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="mb-16" id="products">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col">
+                    <img alt="Wireless over-ear headphones with black and silver design on white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f223428d-03af-4f95-bbc1-1b1d537860ee.jpg"
+                        width="400" />
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Wireless Headphones</h3>
+                        <p class="text-gray-700 flex-grow">Experience high-quality sound with noise cancellation and long battery life.</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-indigo-600 font-bold text-xl">₹7,499</span>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition add-to-cart" data-id="1" data-image="https://placehold.co/400x300/png?text=Wireless+Headphones" data-name="Wireless Headphones" data-price="7499">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col">
+                    <img alt="Smart watch with black strap and digital display showing time and health stats" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/1c0f80fb-58fb-4b2a-ab42-d7da2ad4e9b4.jpg"
+                        width="400" />
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Smart Watch</h3>
+                        <p class="text-gray-700 flex-grow">Stay connected and track your fitness with this sleek smart watch.</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-indigo-600 font-bold text-xl">₹11,299</span>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition add-to-cart" data-id="2" data-image="https://placehold.co/400x300/png?text=Smart+Watch" data-name="Smart Watch" data-price="11299">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col">
+                    <img alt="Pair of red and white running shoes on white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/7b4aab69-7f92-42a0-fdeb-0b1d7c837e56.jpg" width="400" />
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Running Shoes</h3>
+                        <p class="text-gray-700 flex-grow">Lightweight and comfortable shoes designed for optimal performance.</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-indigo-600 font-bold text-xl">₹6,199</span>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition add-to-cart" data-id="3" data-image="https://placehold.co/400x300/png?text=Running+Shoes" data-name="Running Shoes" data-price="6199">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col">
+                    <img alt="Elegant brown leather handbag with gold accents on white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/9ae16458-2703-49f0-38bb-b95dcf586e56.jpg" width="400"
+                    />
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Leather Handbag</h3>
+                        <p class="text-gray-700 flex-grow">Stylish and spacious handbag made from premium leather.</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-indigo-600 font-bold text-xl">₹9,299</span>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition add-to-cart" data-id="4" data-image="https://placehold.co/400x300/png?text=Leather+Handbag" data-name="Leather Handbag" data-price="9299">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col">
+                    <img alt="Portable Bluetooth speaker in black with blue LED lights on white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/81788f24-4bd5-4a4f-9e19-f69b27da67e6.jpg"
+                        width="400" />
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Bluetooth Speaker</h3>
+                        <p class="text-gray-700 flex-grow">Compact speaker with powerful sound and waterproof design.</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-indigo-600 font-bold text-xl">₹4,399</span>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition add-to-cart" data-id="5" data-image="https://placehold.co/400x300/png?text=Bluetooth+Speaker" data-name="Bluetooth Speaker" data-price="4399">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col">
+                    <img alt="Classic blue denim jacket on white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8a774e5c-ea80-4c84-cede-0f176374da5b.jpg" width="400" />
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Denim Jacket</h3>
+                        <p class="text-gray-700 flex-grow">Timeless denim jacket perfect for casual and street style looks.</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-indigo-600 font-bold text-xl">₹6,599</span>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition add-to-cart" data-id="6" data-image="https://placehold.co/400x300/png?text=Denim+Jacket" data-name="Denim Jacket" data-price="6599">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col">
+                    <img alt="Mechanical gaming keyboard with RGB backlighting on white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/e1cb9968-057c-4315-99bd-7ed85271913b.jpg" width="400"
+                    />
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Gaming Keyboard</h3>
+                        <p class="text-gray-700 flex-grow">Responsive mechanical keyboard with customizable RGB lighting.</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-indigo-600 font-bold text-xl">₹8,299</span>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition add-to-cart" data-id="7" data-image="https://placehold.co/400x300/png?text=Gaming+Keyboard" data-name="Gaming Keyboard" data-price="8299">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="bg-white rounded-lg shadow hover:shadow-lg transition flex flex-col">
+                    <img alt="Pair of classic black sunglasses with dark lenses on white background" class="rounded-t-lg object-cover w-full h-48" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/f8b2bc51-ffce-41b7-f63d-db4eb496b6d2.jpg" width="400"
+                    />
+                    <div class="p-4 flex flex-col flex-grow">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Classic Sunglasses</h3>
+                        <p class="text-gray-700 flex-grow">UV protection sunglasses with timeless design for everyday wear.</p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <span class="text-indigo-600 font-bold text-xl">₹3,099</span>
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition add-to-cart" data-id="8" data-image="https://placehold.co/400x300/png?text=Classic+Sunglasses" data-name="Classic Sunglasses" data-price="3099">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="mb-16 bg-white rounded-lg shadow-lg p-8" id="about-section">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">About ShopEase</h2>
+            <div class="max-w-4xl mx-auto text-gray-700 space-y-4 text-justify">
+                <p>ShopEase is your one-stop online store for the latest and greatest in fashion, electronics, and lifestyle products. We are committed to providing high-quality products at affordable prices, ensuring a seamless shopping experience for our
+                    customers across India.</p>
+                <p>Our mission is to bring you the best selection of trendy and reliable products, backed by excellent customer service. Whether you're looking for stylish apparel, cutting-edge gadgets, or everyday essentials, ShopEase has you covered.</p>
+                <p>We value trust, quality, and customer satisfaction above all else. Join thousands of happy customers who have made ShopEase their preferred shopping destination.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="mb-16 bg-white rounded-lg shadow-lg p-8" id="contact-section">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Contact Us</h2>
+            <div class="max-w-3xl mx-auto">
+                <form class="space-y-6" id="contact-form" novalidate>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2" for="name">Name</label>
+                        <input class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600" id="name" name="name" placeholder="Your full name" required type="text" />
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2" for="email">Email</label>
+                        <input class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600" id="email" name="email" placeholder="you@example.com" required type="email" />
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2" for="message">Message</label>
+                        <textarea class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600" id="message" name="message" placeholder="Write your message here..." required rows="5"></textarea>
+                    </div>
+                    <div>
+                        <button class="bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700 transition w-full" type="submit">Send Message</button>
+                    </div>
+                </form>
+                <div class="mt-8 text-center text-gray-700 space-y-2">
+                    <p><i class="fas fa-phone-alt mr-2 text-indigo-600"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope mr-2 text-indigo-600"></i> support@shopease.in</p>
+                    <p><i class="fas fa-map-marker-alt mr-2 text-indigo-600"></i> 123, Market Street, Hyderabad, India</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div aria-labelledby="cart-modal-title" aria-modal="true" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" id="cart-modal" role="dialog">
+        <div class="bg-white rounded-lg shadow-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto flex flex-col">
+            <header class="flex justify-between items-center border-b border-gray-200 p-4">
+                <h3 class="text-xl font-bold text-gray-900" id="cart-modal-title">Your Cart</h3>
+                <button aria-label="Close cart" class="text-gray-700 hover:text-indigo-600 transition focus:outline-none" id="close-cart">
+          <i class="fas fa-times fa-lg"></i>
+        </button>
+            </header>
+            <div class="p-4 flex-grow overflow-y-auto" id="cart-items">
+                <p class="text-gray-700 text-center">Your cart is empty.</p>
+            </div>
+            <footer class="border-t border-gray-200 p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                <div class="text-gray-900 font-semibold text-lg" id="cart-total">Total: ₹0.00</div>
+                <button class="mt-4 sm:mt-0 bg-indigo-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-indigo-700 transition disabled:opacity-50 disabled:cursor-not-allowed" disabled id="checkout-button">Checkout</button>
+            </footer>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
